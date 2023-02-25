@@ -1,8 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 const urlRoutes = require("./routes/urlRoutes");
 const errorMiddleware = require("./middleware/errorMiddleware");
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 // Middleware
